@@ -12,3 +12,34 @@ def divide(x, y):
         return x / y
     else:
         return "Error: Division by zero"
+
+# Interaktywny interfejs użytkownika
+while True:
+    print("Wybierz operację:")
+    print("1. Dodawanie")
+    print("2. Odejmowanie")
+    print("3. Mnożenie")
+    print("4. Dzielenie")
+    print("5. Zakończ")
+
+    choice = input("Wprowadź numer operacji (1/2/3/4/5): ")
+
+    if choice == '5':
+        print("Kalkulator zakończył działanie.")
+        break
+
+    if choice not in ('1', '2', '3', '4'):
+        print("Nieprawidłowy wybór. Wybierz ponownie.")
+        continue
+
+    num1 = float(input("Podaj pierwszą liczbę: "))
+    num2 = float(input("Podaj drugą liczbę: "))
+
+    if choice == '1':
+        print(f"{num1} + {num2} = {add(num1, num2)}")
+    elif choice == '2':
+        print(f"{num1} - {num2} = {subtract(num1, num2)}")
+    elif choice == '3':
+        print(f"{num1} * {num2} = {multiply(num1, num2)}")
+    elif choice == '4':
+        print(f"{num1} / {num2} = {divide(num1, num2)}")
